@@ -28,7 +28,7 @@ jobs:
         run: ls -R dist/smart-guys-app
         
       - name: Configure Git
-        run: 
+        run: |
           git config --global user.email "80596881+Inen89@users.noreply.github.com"
           git config --global user.name "Inen89"
 
