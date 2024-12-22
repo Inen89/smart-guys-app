@@ -1,0 +1,11 @@
+@import "../../../styles.scss";
+
+.btn-primary {
+  color: $primary;
+  transition: transform 0.3s ease-in;
+}
+.btn-primary:hover {
+  color: $primary;
+  filter: brightness(150%);
+  transform: scale(1.5);
+}

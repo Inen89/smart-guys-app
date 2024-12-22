@@ -1,0 +1,73 @@
+<div class="modal show">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>{{ user ? "Edit brainiac" : "Add new brainiac" }}</h5>
+        <button
+          (click)="onCancel()"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="close"
+        ></button>
+      </div>
+      <form (ngSubmit)="onSubmit()" #ngFormRef="ngForm" class="modal-body">
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="first_name" class="form-label"
+              >First name <span class="text-danger">*</span></label
+            >
+            <input
+              type="text"
+              id="first_name"
+              [(ngModel)]="userForm.first_name"
+              name="first_name"
+              placeholder="Type in the first name"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="last_name" class="form-label"
+              >Last name <span class="text-danger">*</span></label
+            >
+            <input
+              type="text"
+              id="last_name"
+              [(ngModel)]="userForm.last_name"
+              name="last_name"
+              placeholder="Type in the last name"
+              class="form-control"
+              required
+            />
+          </div>
+        </div>
+        <div class="mb-5">
+          <label for="email" class="form-label"
+            >E-mail <span class="text-danger">*</span></label
+          >
+          <input
+            type="email"
+            id="email"
+            [(ngModel)]="userForm.email"
+            name="email"
+            placeholder="Type in the email"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="modal-footer">
+          <button
+            type="submit"
+            [disabled]="ngFormRef.invalid"
+            class="btn btn-secondary"
+          >
+            Save
+          </button>
+          <button type="button" (click)="onCancel()" class="btn btn-primary">
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

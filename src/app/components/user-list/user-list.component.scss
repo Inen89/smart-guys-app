@@ -1,0 +1,13 @@
+.btn-primary:hover {
+  filter: brightness(150%);
+}
+
+.container {
+  width: 66vw;
+}
+
+table thead tr {
+  background-color: #b15b5b;
+  --bs-table-accent-bg: #b15b5b;
+  --bs-table-color: white;
+}
