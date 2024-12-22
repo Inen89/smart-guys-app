@@ -1,3 +1,7 @@
+.navbar {
+  min-width: 100% !important;
+}
+
 nav a span {
   font-family: "Architects Daughter";
   font-weight: 400;
@@ -5,4 +9,10 @@ nav a span {
 
 .container-fluid {
   width: 66vw;
+}
+
+@media (max-width: 768px) {
+  .container-fluid {
+    width: 100vw;
+  }
 }

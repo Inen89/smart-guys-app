@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'app/services/api.service'; // Importujemy ApiService
+import { ApiService } from 'app/services/api.service';
 import { UserFormComponent } from '../user-form/user-form.component';
 import { CommonModule } from '@angular/common';
 import { User } from 'app/models/user.model';
@@ -49,14 +49,16 @@ export class UserListComponent implements OnInit {
     this.showModal = true;
   }
 
+  //Zamknięcie modalu edytowania użytkownika
   onHideEditModal() {
     this.showModal = false;
+    this.userToEdit = null;
   }
 
   // Obsługa dodania użytkownika
   onUserAdded(newUser: User) {
     this.users.push(newUser); // Dodaj użytkownika do lokalnej listy
-    this.showModal = false; // Zamykamy modal
+    this.showModal = false;
   }
 
   // Obsługa aktualizacji użytkownika
@@ -74,7 +76,7 @@ export class UserListComponent implements OnInit {
 
   // ===== Modal usuwania użytkownika =====
 
-  // Pokazanie modalu usuwania
+  // Pokazanie modalu usuwania użytkownika
   onShowDeleteModal(user: User) {
     this.userToDelete = user;
   }
@@ -89,7 +91,7 @@ export class UserListComponent implements OnInit {
     }
   }
 
-  // Anulowanie usunięcia
+  // Zamknięcie modalu usuwania użytkownika
   onHideDeleteModal() {
     this.userToDelete = null;
   }

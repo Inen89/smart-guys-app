@@ -10,30 +10,32 @@
     </button>
   </div>
 
-  <table class="container table table-striped mx-auto">
-    <thead>
-      <tr class="bg-secondary">
-        <th scope="col" class="text-center">Id</th>
-        <th scope="col"></th>
-        <th scope="col">First name</th>
-        <th scope="col">Last name</th>
-        <th scope="col">E-mail</th>
-        <th scope="col"></th>
-        <th scope="col"></th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- Komponent z wierszem tabeli -->
-      <tr
-        *ngFor="let user of users"
-        app-user-row
-        [user]="user"
-        (edit)="onShowEditModal($event)"
-        (delete)="onShowDeleteModal($event)"
-        class="align-middle"
-      ></tr>
-    </tbody>
-  </table>
+  <div class="table-responsive">
+    <table class="container table table-striped mx-auto">
+      <thead>
+        <tr class="bg-secondary">
+          <th scope="col" class="text-center">Id</th>
+          <th scope="col"></th>
+          <th scope="col">First name</th>
+          <th scope="col">Last name</th>
+          <th scope="col">E-mail</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Komponent z wierszem tabeli -->
+        <tr
+          *ngFor="let user of users"
+          app-user-row
+          [user]="user"
+          (edit)="onShowEditModal($event)"
+          (delete)="onShowDeleteModal($event)"
+          class="align-middle"
+        ></tr>
+      </tbody>
+    </table>
+  </div>
 
   <!-- Modal z formularzem edycji -->
   <app-user-form

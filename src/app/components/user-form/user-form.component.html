@@ -56,15 +56,15 @@
           />
         </div>
         <div class="modal-footer">
+          <button type="button" (click)="onCancel()" class="btn btn-secondary">
+            Cancel
+          </button>
           <button
             type="submit"
             [disabled]="ngFormRef.invalid"
-            class="btn btn-secondary"
+            class="btn btn-primary"
           >
             Save
-          </button>
-          <button type="button" (click)="onCancel()" class="btn btn-primary">
-            Cancel
           </button>
         </div>
       </form>
