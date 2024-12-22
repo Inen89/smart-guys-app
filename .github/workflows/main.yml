@@ -28,6 +28,6 @@ jobs:
         run: ls -R dist/smart-guys-app
 
       - name: Deploy to GitHub Pages
-        run: npx angular-cli-ghpages --dir=dist/smart-guys-app
+        run: npx angular-cli-ghpages --dir=dist/smart-guys-app/browser
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}  # Używa automatycznego tokenu
