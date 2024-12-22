@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - master  # Lub 'master', w zależności od tego, jaką gałąź masz jako główną
+      - master  
 
 jobs:
   deploy:
