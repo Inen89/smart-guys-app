@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "predeploy": "ng build --configuration production --base-href /smart-guys-app/",
-    "deploy": "npx angular-cli-ghpages --dir=dist/smart-guys-app"
+    "deploy": "npx angular-cli-ghpages --dir=dist/smart-guys-app/browser"
   },
   "private": true,
   "dependencies": {
