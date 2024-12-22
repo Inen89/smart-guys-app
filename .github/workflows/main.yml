@@ -26,8 +26,13 @@ jobs:
 
       - name: List files in dist folder
         run: ls -R dist/smart-guys-app
+        
+      - name: Configure Git
+        run: 
+          git config --global user.email "80596881+Inen89@users.noreply.github.com"
+          git config --global user.name "Inen89"
 
       - name: Deploy to GitHub Pages
-        run: npx angular-cli-ghpages --dir=dist/smart-guys-app/browser --no-silent
+        run: npm run deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}  # Używa automatycznego tokenu
