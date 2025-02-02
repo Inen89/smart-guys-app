@@ -2,6 +2,13 @@ table thead tr {
   background-color: #b15b5b;
   --bs-table-accent-bg: #b15b5b;
   --bs-table-color: white;
+  height: 3.1rem;
+  vertical-align: middle;
+}
+
+button fa-icon {
+  stroke: currentColor;
+  stroke-width: 25 !important;
 }
 
 .btn-primary:hover {
@@ -9,5 +16,11 @@ table thead tr {
 }
 
 .container {
-  width: 66vw;
+  width: 63.5vw;
+}
+
+@media (max-width: 992px) {
+  .container {
+    width: 100vw;
+  }
 }

@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 import { User } from 'app/models/user.model';
 import { DeleteModalComponent } from '../delete-modal/delete-modal.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faPlus, faUserGroup } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faUserFriends } from '@fortawesome/free-solid-svg-icons';
 import { UserRowComponent } from '../user-row/user-row.component';
 
 @Component({
@@ -21,7 +21,7 @@ import { UserRowComponent } from '../user-row/user-row.component';
   styleUrls: ['./user-list.component.scss'],
 })
 export class UserListComponent implements OnInit {
-  faUserGroup = faUserGroup;
+  faUserFriends = faUserFriends;
   faPlus = faPlus;
   users: User[] = []; // Tablica na przechowywanie danych użytkowników
   showModal: boolean = false; // Flaga do wyświetlania formularza

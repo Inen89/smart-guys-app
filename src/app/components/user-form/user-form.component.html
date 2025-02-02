@@ -1,11 +1,13 @@
 <div class="modal show">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5>{{ user ? "Edit brainiac" : "Add new brainiac" }}</h5>
+      <div class="modal-header p-4 align-items-baseline">
+        <h5 class="fs-4 mb-0">
+          {{ user ? "Edit brainiac" : "Add new brainiac" }}
+        </h5>
         <button
           (click)="onCancel()"
-          class="btn-close"
+          class="btn-close fs-6"
           data-bs-dismiss="modal"
           aria-label="close"
         ></button>
@@ -55,9 +57,9 @@
             required
           />
         </div>
-        <div class="modal-footer">
+        <div class="modal-footer px-3">
           <button type="button" (click)="onCancel()" class="btn btn-secondary">
-            Cancel
+            Close
           </button>
           <button
             type="submit"

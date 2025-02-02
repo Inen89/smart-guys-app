@@ -5,6 +5,11 @@
   background: rgba(0, 0, 0, 0.5);
 }
 
+.modal-footer {
+  margin-right: -1rem;
+  margin-left: -1rem;
+}
+
 .btn:hover {
   filter: brightness(150%);
 }

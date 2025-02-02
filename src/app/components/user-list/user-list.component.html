@@ -1,20 +1,21 @@
 <div>
   <div
-    class="container mb-3 mt-5 d-flex justify-content-between align-items-center"
+    class="container mb-3 mt-5 p-0 d-flex justify-content-between align-items-center"
   >
-    <div class="fs-3">
-      <fa-icon [icon]="faUserGroup"></fa-icon> List of smart guys
+    <div class="fs-1">
+      <fa-icon [icon]="faUserFriends" class="fs-1 pe-2"></fa-icon>
+      List of smart guys
     </div>
-    <button (click)="showModal = true" class="btn btn-primary fs-6 py-1">
+    <button (click)="showModal = true" class="btn btn-primary rounded-1 fs-6">
       <fa-icon [icon]="faPlus" class="pe-2"> </fa-icon> Add brainiac
     </button>
   </div>
 
   <div class="table-responsive">
-    <table class="container table table-striped mx-auto">
+    <table class="container table table-striped">
       <thead>
-        <tr class="bg-secondary">
-          <th scope="col" class="text-center">Id</th>
+        <tr class="bg-secondary fs-6">
+          <th scope="col" class="px-3">Id</th>
           <th scope="col"></th>
           <th scope="col">First name</th>
           <th scope="col">Last name</th>

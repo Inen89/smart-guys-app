@@ -1,18 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Poppins&display=swap");
+
 .navbar {
   min-width: 100% !important;
 }
 
-nav a span {
+.container-fluid > a:first-child {
   font-family: "Architects Daughter";
   font-weight: 400;
 }
 
-.container-fluid {
-  width: 66vw;
+.container {
+  width: 63.5vw;
 }
 
-@media (max-width: 768px) {
-  .container-fluid {
+@media (max-width: 992px) {
+  .container {
     width: 100vw;
+  }
+
+  .collapsing,
+  .show {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    right: 0;
+  }
+  .collapsing > ul,
+  .show > ul {
+    padding-right: 1rem !important;
+    padding-bottom: 1rem;
   }
 }

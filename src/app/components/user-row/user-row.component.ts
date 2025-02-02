@@ -1,6 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faPenToSquare, faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { User } from 'app/models/user.model';
 
 @Component({
@@ -14,8 +14,8 @@ export class UserRowComponent {
   @Output() edit = new EventEmitter<User>();
   @Output() delete = new EventEmitter<User>();
 
-  faPenToSquare = faPenToSquare;
-  faTrashCan = faTrashCan;
+  faEdit = faEdit;
+  faTrashAlt = faTrashAlt;
 
   onEdit() {
     this.edit.emit(this.user);

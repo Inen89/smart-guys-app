@@ -1,18 +1,20 @@
-<nav class="bg-primary navbar navbar-expand-md navbar-dark">
-  <div class="container-fluid d-flex">
-    <a class="navbar-brand" routerLink="/">
+<nav
+  class="bg-primary navbar navbar-expand-lg navbar-dark nav-fill position-relative"
+>
+  <div class="container d-flex px-0">
+    <a class="navbar-brand fs-4" routerLink="/">
       <img
         src="assets/images/logo.png"
         alt="Logo"
-        width="40"
-        height="40"
+        width="56"
+        height="56"
         class="d-inline-block align-text-mid me-3"
       />
       Brainiacs
     </a>
     <div class="text-end">
       <button
-        class="navbar-toggler"
+        class="navbar-toggler fs-2"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#navbarNav"
@@ -22,11 +24,14 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse me-3" id="navbarNav">
-        <ul class="navbar-nav">
+      <div
+        class="collapse navbar-collapse fs-5 bg-primary align-items-end"
+        id="navbarNav"
+      >
+        <ul class="navbar-nav d-flex align-items-end container w-100 pe-0">
           <li class="nav-item">
             <a
-              class="nav-link"
+              class="nav-link me-1"
               aria-current="page"
               routerLink="/"
               routerLinkActive="active"
@@ -36,7 +41,7 @@
           </li>
           <li class="nav-item">
             <a
-              class="nav-link"
+              class="nav-link me-1"
               routerLink="/smart-guys"
               routerLinkActive="active"
               >List of smart guys</a
@@ -45,7 +50,7 @@
 
           <li class="nav-item">
             <a
-              class="nav-link disabled"
+              class="nav-link disabled me-1"
               href="#"
               tabindex="-1"
               aria-disabled="true"

@@ -1,11 +1,26 @@
 @import "../../../styles.scss";
 
+.col-narrow {
+  width: 2.3%;
+}
+
 .btn-primary {
   color: $primary;
   transition: transform 0.3s ease-in;
+  font-size: 1.2rem;
 }
 .btn-primary:hover {
   color: $primary;
   filter: brightness(150%);
   transform: scale(1.5);
+}
+
+td:first-of-type {
+  width: 5%;
+}
+
+img {
+  width: 70%;
+  min-width: 3.3rem;
+  max-height: 3.3rem;
 }

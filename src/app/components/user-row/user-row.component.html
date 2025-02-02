@@ -1,15 +1,23 @@
-<th scope="row" class="text-center">{{ user.id }}</th>
-<td><img [src]="user.avatar" alt="user avatar" class="img-fluid w-25" /></td>
-<td>{{ user.first_name }}</td>
-<td>{{ user.last_name }}</td>
-<td>{{ user.email }}</td>
-<td>
-  <button (click)="onEdit()" class="btn btn-primary bg-transparent border-0">
-    <fa-icon [icon]="faPenToSquare"></fa-icon>
+<th scope="row" class="col-1 col-narrow px-3 fw-normal fs-6">{{ user.id }}</th>
+<td class="col-1 px-0 py-3">
+  <img [src]="user.avatar" alt="user avatar" />
+</td>
+<td class="col-2">{{ user.first_name }}</td>
+<td class="col-2">{{ user.last_name }}</td>
+<td class="col-4">{{ user.email }}</td>
+<td class="col-1 col-narrow p-0">
+  <button
+    (click)="onEdit()"
+    class="btn btn-primary bg-transparent border-0 p-2"
+  >
+    <fa-icon [icon]="faEdit"></fa-icon>
   </button>
 </td>
-<td>
-  <button (click)="onDelete()" class="btn btn-primary bg-transparent border-0">
-    <fa-icon [icon]="faTrashCan"></fa-icon>
+<td class="col-1 col-narrow p-0">
+  <button
+    (click)="onDelete()"
+    class="btn btn-primary bg-transparent border-0 p-2 pe-3"
+  >
+    <fa-icon [icon]="faTrashAlt"></fa-icon>
   </button>
 </td>
