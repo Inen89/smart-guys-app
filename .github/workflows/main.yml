@@ -9,6 +9,11 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write   # permits writing into repository
+      pages: write      # permissions for GitHub Pages
+      id-token: write   # needed for publication 
+
     steps:
       - name: Check out the repository
         uses: actions/checkout@v3
@@ -16,7 +21,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '22'  # Wybierz odpowiednią wersję Node.js
+          node-version: '22'  # Choose Node.js version
 
       - name: Install dependencies
         run: npm install
@@ -35,4 +40,4 @@ jobs:
       - name: Deploy to GitHub Pages
         run: npm run deploy
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}  # Używa automatycznego tokenu
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Uses automatic token
