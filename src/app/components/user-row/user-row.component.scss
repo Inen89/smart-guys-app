@@ -9,6 +9,10 @@
   transition: transform 0.3s ease-in;
   font-size: 1.2rem;
 }
+.btn-primary:active,
+.btn-primary:focus-visible {
+  color: $primary !important;
+}
 .btn-primary:hover {
   color: $primary;
   filter: brightness(150%);
