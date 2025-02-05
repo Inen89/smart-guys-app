@@ -7,10 +7,14 @@ export const routes: Routes = [
   { path: '', component: HomeComponent },
   {
     path: 'smart-guys',
-    loadComponent: () =>
-      import('./components/user-list/user-list.component').then(
-        (m) => m.UserListComponent
+    loadChildren: () =>
+      import('./modules/user-list/user-list.module').then(
+        (m) => m.UserListModule
       ),
+    // loadComponent: () =>
+    //   import('./components/user-list/user-list.component').then(
+    //     (m) => m.UserListComponent
+    //   ),
   },
   { path: '**', component: ErrorComponent },
 ];
